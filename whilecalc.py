@@ -2,6 +2,10 @@ x = 1
 while (x != 0):
     x = float(input(" 1 - Adição \n 2 - Subtração \n 3 - Multiplicação \n 4 - Divisão \n 0 - Para Retornar interromper\n"))
 
+    if (x > 4 or x < 0):
+        print("Opção invalida.")
+        continue
+
     if x == 1:
         n1 = int(input("Digite um numero para a operação de Adição: "))
         n2 = int(input("Digite um numero para a operação de Adição: "))
