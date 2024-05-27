@@ -1,11 +1,11 @@
 cont = 0
-x = 0
-z = 101
-while x < 1:
-    z = z -1
-    print (z)
+
+x = int(input("Digite um valor: "))
+while x >= 0:
+    x = x - 1
+    print (x)
     cont = cont + 1
-    if z == 0:
+    if x == 0:
         break
 
-print ("O numero 100 pode ser reduzido ",cont, " vezes.")
+print ("O numero foi reduzido", cont, " vezes.")
