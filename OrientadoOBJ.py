@@ -9,3 +9,4 @@ while True:
         print("É par.")
     else:
         print("É impar.")
+        
