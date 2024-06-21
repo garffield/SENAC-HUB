@@ -106,7 +106,7 @@ def clientecadastro():
         elif verificarcad == 9:
             print(Cliente_Cadastro[9])
         elif verificarcad == 10:
-            print(Cliente_Cadastro[10])
+            print(Cliente_Cadastro)
         
 def is_alpha_space(str):
     return all(char.isalpha() or char.isspace() for char in str)
@@ -125,3 +125,4 @@ def nome(msg):
             return frase
 
 
+clientecadastro()
