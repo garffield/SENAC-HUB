@@ -48,16 +48,16 @@ Cadastros com no mínimo 10 variáveis
 
 CADASTROS CLIENTE:
 
-nome completo
-cpf
-data de nascimento
-telefone fixo
-profissao
-celular
-email
-observação
-sexo
-data de inclusão no cadastro
+nome completo #
+cpf #
+idade #
+telefone fixo #
+profissao #
+celular #
+email #
+observação 
+sexo #
+data de inclusão no cadastro #
 
 CADASTRO DAS PEÇAS:
 
