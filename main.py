@@ -1,10 +1,11 @@
 from programa import clientecadastro
-x = 1
 
-while x != 0:
+while True:
     print ('-------------------------------')
-    x = int(input("Selecione a opção desejada: "))
     print("0 - SAIR\n1 - CADASTRAR CLIENTE ")
+    x = int(input("Selecione a opção desejada: "))
 
     if x == 1:
         clientecadastro()
+    if x == 0:
+        break
