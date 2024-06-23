@@ -1,6 +1,9 @@
 Cliente_Cadastro = {}
-
+PeçaCadastro = {}
+VeiculoCadastro = {}
+ServicoCadastro = {}
 def clientecadastro():
+
 
     while True: #CPF
         try:
@@ -89,6 +92,7 @@ def clientecadastro():
     Cliente_Cadastro['Notas'] = notas
     Cliente_Cadastro['Data do cadastro'] = datacad
 
+    '''
     while True:
         print("Deseja fazer alguma alteração? ")
         print("0 - NOME\n1 - CPF\n2 - IDADE\n3 - TELEFONE\n4 - PROFISSÃO\n5 - CELULAR\n6 - EMAIL\n7 - SEXO\n8 - OBSERVAÇÕES\n9 - DATA DO CADASTRO\n10 - NÃO ALTERAR NADA")
@@ -117,4 +121,107 @@ def clientecadastro():
         elif alterarcad == 9:
             print(Cliente_Cadastro['Data do cadastro'])
         elif alterarcad == 10:
-            break   
+            break
+    '''
+
+def peçacadastro():
+    while True: #NOME
+        nome = input("Informe o nome da peça: ")
+        if nome.isdigit():
+            print("Informe um nome válido: ")
+        else:
+            break
+    while True: #NUMERO
+        try:
+            numero = int(input("Informe o numero da peça: "))
+            break
+        except ValueError:
+            print("Informe apenas numeros")
+    while True: #MODELO
+        modelo = input("Informe o modelo da peça: ")
+        break
+    while True: #MARCA:
+        marca = input("Informe a marca da peça: ")
+        if len(marca) > 15: 
+            print("Informe um valor válido")
+        else:
+            break
+    while True: #TIPO DE PEÇA
+        tipo = input("Informe o tipo de peça: ")
+        break
+    while True: #QTD STOCK
+        
+        try:
+            qtd = int(input("Informe a quantidade em stock: "))
+            if qtd < 0:
+                break
+            else:
+                break
+        except ValueError:
+            print("Informe apenas numeros")
+    while True: #PREÇO
+        try:
+            preco = float(input("Informe o preco da peça: R$"))
+            if preco < 0:
+                print("Valor inválido")
+            else: 
+                break
+        except ValueError:
+            print("Informe apenas numeros")
+    while True: #DATA DE COMPRA
+        data = input("Informe a data de compra (DD/MM/AAAA): ")
+        if '/' in data:
+            break
+        else: 
+            print("Informe uma data válida")
+    while True: #LOCAÇÃO
+        locacao_y_n = input("Deseja fazer a locação de alguma peça? (S/N): ")
+        if locacao_y_n == 'S':
+            locacao = input("Digite o nome da peça: ")
+            break
+        elif locacao_y_n == 'N':
+            locacao = 'Nenhuma'
+            break
+        else: 
+            print("Informe apenas S ou N")
+    while True: #NOTAS
+        notas = input("Informe alguma nota ou observação: ")
+        break
+
+    PeçaCadastro['Nome da peça'] = nome
+    PeçaCadastro['Numero da peça'] = numero
+    PeçaCadastro['Modelo da peça'] = modelo
+    PeçaCadastro['Marca da peça'] = marca
+    PeçaCadastro['Tipo da peça'] = tipo
+    PeçaCadastro['Quantidade de peças'] = qtd
+    PeçaCadastro['Preço da peça'] = preco
+    PeçaCadastro['Data de compra'] = data
+    PeçaCadastro['Locação? '] = locacao
+    PeçaCadastro['Notas'] = notas
+
+def veiculocadastro():
+    while True: #MARCA
+        marca = input("Informe a marca do veiculo: ")
+        if marca == '':
+            print("Informe uma marca válida")
+        else: 
+            break
+    while True: #MODELO
+        modelo = input("Informe o modelo do veiculo: ")
+        if modelo == '':
+            print("Informe um modelo válido: ")
+        else: 
+            break
+    while True: #ANO
+        ano = int(input("Informe o ano do veiculo: "))
+        if ano > 2024 or ano < 1930:
+            print("Informe um ano válido")
+        else: 
+            break
+    while True:
+        placa = input("Informe a placa do veiculo: ")
+        if placa == '' or len(placa) > 7:
+            print("Informe uma placa válida")
+        else:
+            break
+    

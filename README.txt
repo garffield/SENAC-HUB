@@ -61,16 +61,16 @@ data de inclusão no cadastro #
 
 CADASTRO DAS PEÇAS:
 
-nome da peça
-numero da peça
-marca
-modelo
-tipo de peça
-quantidade de estoque
-pelo unitario
-data de compra
-localização do estoque
-notas
+nome da peça #
+numero da peça #
+marca #
+modelo #
+tipo de peça #
+quantidade de estoque #
+pelo unitario #
+data de compra #
+localização do estoque  #
+notas #
 
 CADASTRO DOS VEICULOS
 
