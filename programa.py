@@ -17,7 +17,7 @@ def clientecadastro():
         except ValueError:
                 print("Por favor, digite apenas números para o CPF.")    
     while True: #NOME
-        nome = input("Informe seu nome: ")
+        nome = input("Informe seu nome completo: ")
         if nome.isdigit() or len(nome) < 6:
             print("Nome inválido, informe seu nome novamente")
         else:
@@ -36,7 +36,7 @@ def clientecadastro():
     while True: #TELEFONE
         try:
             telefone = input("Informe seu telefone fixo: ")
-            if len(telefone) == 8:
+            if len(telefone) == 8 or telefone.isalpha():
                 print("Telefone válido !!")
                 break
             else:
@@ -93,7 +93,6 @@ def clientecadastro():
     Cliente_Cadastro['Notas'] = notas
     Cliente_Cadastro['Data do cadastro'] = datacad
     
-
 def peçacadastro():
     while True: #NOME
         nome = input("Informe o nome da peça: ")
