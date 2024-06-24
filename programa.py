@@ -93,6 +93,7 @@ def clientecadastro():
     Cliente_Cadastro['Notas'] = notas
     Cliente_Cadastro['Data do cadastro'] = datacad
     
+
 def peçacadastro():
     while True: #NOME
         nome = input("Informe o nome da peça: ")
