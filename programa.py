@@ -323,4 +323,3 @@ def fornecedores():
     pass
 def contaspendentes():
     pass
-
