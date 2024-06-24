@@ -74,29 +74,29 @@ notas #
 
 CADASTRO DOS VEICULOS
 
-marca
-modelo
-ano
-placa
-cor
-chassi numero
-quilometragem
-tipo de combustivel
-tipo de transmissao
-observação
+marca #
+modelo # 
+ano #
+placa #
+cor #
+chassi numero #
+quilometragem #
+tipo de combustivel #
+tipo de transmissao #
+observação #
 
 CADASTRO DE SERVIÇOS
 
 tipo de serviço
-veiculo
-data de entrada
-data de saida
-mecanico responsavel
-descrição do problema
-pelas utilizadas
-forma de pagamento
-valor total
-observações
+veiculo #
+data de entrada #
+data de saida #
+mecanico responsavel #
+descrição do problema # 
+peças utilizadas # 
+forma de pagamento #
+valor total # 
+observações #
 
 CADASTRO DOS FORNECEDORES
 

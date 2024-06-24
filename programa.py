@@ -2,6 +2,7 @@ Cliente_Cadastro = {}
 PeçaCadastro = {}
 VeiculoCadastro = {}
 ServicoCadastro = {}
+
 def clientecadastro():
 
 
@@ -92,38 +93,6 @@ def clientecadastro():
     Cliente_Cadastro['Notas'] = notas
     Cliente_Cadastro['Data do cadastro'] = datacad
 
-    '''
-    while True:
-        print("Deseja fazer alguma alteração? ")
-        print("0 - NOME\n1 - CPF\n2 - IDADE\n3 - TELEFONE\n4 - PROFISSÃO\n5 - CELULAR\n6 - EMAIL\n7 - SEXO\n8 - OBSERVAÇÕES\n9 - DATA DO CADASTRO\n10 - NÃO ALTERAR NADA")
-        alterarcad = int(input("Digite aqui: "))
-        if alterarcad == 0:
-            del Cliente_Cadastro[nome]
-            nome = nome("Digite seu nome completo: ")
-            Cliente_Cadastro['Nome'] = nome
-            print(Cliente_Cadastro['Nome'])
-        elif alterarcad == 1:
-            print(Cliente_Cadastro['CPF'])
-        elif alterarcad == 2:
-            print(Cliente_Cadastro['Idade'])
-        elif alterarcad == 3:
-            print(Cliente_Cadastro['Telefone'])
-        elif alterarcad == 4:
-            print(Cliente_Cadastro['Profissão'])
-        elif alterarcad == 5:
-            print(Cliente_Cadastro['Celular'])
-        elif alterarcad == 6:
-            print(Cliente_Cadastro['Email'])
-        elif alterarcad == 7:
-            print(Cliente_Cadastro['Sexo'])
-        elif alterarcad == 8:
-            print(Cliente_Cadastro['Notas'])
-        elif alterarcad == 9:
-            print(Cliente_Cadastro['Data do cadastro'])
-        elif alterarcad == 10:
-            break
-    '''
-
 def peçacadastro():
     while True: #NOME
         nome = input("Informe o nome da peça: ")
@@ -170,10 +139,10 @@ def peçacadastro():
             print("Informe apenas numeros")
     while True: #DATA DE COMPRA
         data = input("Informe a data de compra (DD/MM/AAAA): ")
-        if '/' in data:
-            break
+        if data == '' or len(data) != 10 or data[2] != '/':
+            print("Insira uma data válida")
         else: 
-            print("Informe uma data válida")
+            break
     while True: #LOCAÇÃO
         locacao_y_n = input("Deseja fazer a locação de alguma peça? (S/N): ")
         if locacao_y_n == 'S':
@@ -218,10 +187,139 @@ def veiculocadastro():
             print("Informe um ano válido")
         else: 
             break
-    while True:
+    while True: #PLACA
         placa = input("Informe a placa do veiculo: ")
         if placa == '' or len(placa) > 7:
             print("Informe uma placa válida")
         else:
             break
+    while True: #COR
+        km = input("Informe a cor do veiculo: ")
+        if km.isdigit():
+            print("Informe uma cor, e não numeros")
+        else:
+            break
+    while True: #CHASSI
+        chassi = input("Informe o chassi do veiculo: ")
+        if chassi == '' or len(chassi) > 17:
+            print("Informe um chassi válido")
+        else:
+            break
+    while True: #KM
+        km = int(input("Informe o km do veiculo: "))
+        if km < 0:
+            print("Informe um km válido")
+        else:
+            break
+    while True: #COMBUSTIVEL
+        combustivel = input("Informe o combustivel do veiculo: ")
+        if combustivel == '' or combustivel.isdigit():
+            print("Informe um combustivel válido")
+        else: 
+            break
+    while True: #TRANSMISSÃO
+        transmissao = input("Informe a transmissão do veiculo: ")
+        if transmissao == '' or transmissao.isdigit():
+            print("Informe uma transmissão válida")
+        else:
+            break
+    while True: #NOTAS
+        notas = input("Observação a respeito do veiculo? (opcional) (ENTER CASO NÃO): ")
+        if notas == '':
+            notas = 'Nenhuma observação'
+            break
+        else:
+            break
+
+    VeiculoCadastro['Marca do veiculo'] = marca
+    VeiculoCadastro['Modelo do veiculo'] = modelo
+    VeiculoCadastro['Ano do veiculo'] = ano
+    VeiculoCadastro['Placa do veiculo'] = placa
+    VeiculoCadastro['Cor do veiculo'] = km
+    VeiculoCadastro['Chassi do veiculo'] = chassi
+    VeiculoCadastro['Km do veiculo'] = km
+    VeiculoCadastro['Combustivel do veiculo'] = combustivel
+    VeiculoCadastro['Transmissão do veiculo'] = transmissao
+    VeiculoCadastro['Notas'] = notas
+
+def servicocadastro():
+    while True: #SERVIÇO
+        servico = input("Informe o serviço realizado: ")
+        if servico == '' or servico.isdigit():
+            print("Informe um serviço válido")
+        else:
+            break
+    while True: #VEICULO
+        veiculo = input("Informe o veiculo que realizou o serviço: ")
+        if veiculo == '' or veiculo.isdigit():
+            print("Informe um veiculo válido")
+        else:
+            break
+    while True: #DATA ENTRADA
+        data_entrada = input("Informe a data de entrada do serviço (DD/MM/AAAA): ")
+        if data_entrada == '' or len(data_entrada) != 10 or data_entrada[2] != '/':
+            print("Informe uma data válida")
+        else: 
+            break
+    while True: #DATA SAIDA
+        data_saida = input("Informe a data de saida do serviço (DD/MM/AAAA): ")
+        if data_saida == '' or len(data_saida) != 10 or data_saida[2]:
+            print("Insira uma data válida")
+        else:
+            break
+    while True: # MECANICO RESPONSAVEL
+        mecanico = input("Informe o mecanico responsavel pelo serviço: ")
+        if mecanico == '' or mecanico.isdigit():
+            print("Informe um mecanico válido")
+        else:
+            break
+    while True: #DESCRIÇÃO DO PROBLEMA
+        descricao = input("Informe a descrição do problema: ")
+        if descricao == '':
+            descricao = 'Nenhuma descrição'
+            break
+        else:
+            break
+    while True: #PEÇAS UTILIZADAS
+        pecas = input("Informe as peças utilizadas no serviço: ")
+        if pecas == '':
+            pecas = 'Nenhuma peça'
+            break
+        else:
+            break
+    while True: #FORMA DE PAGAMENTO
+        forma_pagamento = input("Informe a forma de pagamento do serviço: ")
+        if forma_pagamento == '' or forma_pagamento.isdigit():
+            print("Informe uma forma de pagamento válida")
+        else:
+            break
+    while True: # VALOR TOTAL
+        valor_total = input("Informe o valor total do serviço: ")
+        if valor_total == '' or valor_total.isalpha():
+            print("Informe um valor total válido")
+        else:
+            break
+    while True: #NOTAS
+        notas = input("Informe as notas do serviço (ENTER PARA NADA): ")
+        if notas == '':
+            notas = 'Nenhuma nota'
+        else:
+            break
     
+    ServicoCadastro['Serviço feito'] = servico
+    ServicoCadastro['Veiculo'] = veiculo
+    ServicoCadastro['Serviço feito'] = servico
+    ServicoCadastro['Data de Entrada'] = data_entrada
+    ServicoCadastro['Data de Saida'] = data_saida
+    ServicoCadastro['Mecanico Responsavel'] = mecanico
+    ServicoCadastro['Descricao do Problema'] = descricao
+    ServicoCadastro['Pecas Utilizadas'] = pecas
+    ServicoCadastro['Forma de Pagamento'] = forma_pagamento
+    ServicoCadastro['Valor Total'] = valor_total
+    ServicoCadastro['Notas'] = notas
+
+def fornecedores():
+    # INCOMPLETA
+    pass
+def contaspendentes():
+    pass
