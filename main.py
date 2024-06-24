@@ -11,6 +11,7 @@ x = 1
 while x != 0:
     print ('-------------------------------')
     print("0 - SAIR\n1 - CLIENTE\n2 - PEÇAS\n3 - VEICULO\n4 - SERVIÇOS\n5 - FORNECEDORES (INCOMPLETO)\n6 - CONTAS A PAGAR ")
+    print ('-------------------------------')
     x = int(input("Selecione a opção desejada: "))
 
     if x == 1:
@@ -25,3 +26,5 @@ while x != 0:
         fornecedores()
     elif x == 6:
         contaspendentes()
+    else:
+        print("Informe um numero dentro dos parâmetros")
