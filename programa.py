@@ -2,6 +2,7 @@ Cliente_Cadastro = {}
 PeçaCadastro = {}
 VeiculoCadastro = {}
 ServicoCadastro = {}
+Clientes = []
 
 def clientecadastro():
 
@@ -92,6 +93,9 @@ def clientecadastro():
     Cliente_Cadastro['Sexo'] = sexo
     Cliente_Cadastro['Notas'] = notas
     Cliente_Cadastro['Data do cadastro'] = datacad
+
+    Clientes.append(Cliente_Cadastro)
+    
     
 
 def peçacadastro():
@@ -323,3 +327,6 @@ def fornecedores():
     pass
 def contaspendentes():
     pass
+def relatorio():
+    print("Relatório de Clientes")
+    print(Cliente_Cadastro)
