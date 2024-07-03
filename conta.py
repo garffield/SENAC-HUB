@@ -1,35 +1,41 @@
 class Conta():
-    def __init__(self, nome, saldo, cpf, senha):
-        self.nome = nome
-        self.__saldo = saldo
-        self.__cpf = cpf
-        self.__senha = senha
+    def __init__(self):
+       pass
 
+    def cadastro(self):
+        print("Area de Cadastro")
+        self.nome = input("Informe seu nome: ")
+        self.__cpf = input("Informe seu CPF: ")
+        self.__saldo = float(input("Informe seu saldo: "))
+        self.__senha = input("Crie uma senha: ")
+        print("Cadastro feito com sucesso")
+    
     def extrato(self):
-        while True:
-            conferir_senha = int(input("Informe sua senha: "))
-            if conferir_senha == self.__senha:
-                print(f"Olá {self.nome}, seu saldo é de R${self.__saldo}")
-                break
-            else:
-                print("Senha incorreta, tente novamente")
-                continue
+        senha_verif = input("Informe sua senha: ")
+        if senha_verif == self.__senha:
+            print(f"Olá {self.nome}, seu saldo é de R${self.__saldo}")
+        else: 
+            print("Senha incorreta")
 
     def depositar(self):
-        while True:
-            deposito = float(input("Informe o valor a ser depositado: "))
-            if deposito > 0:
-                self.__saldo += deposito
-                break
-            else:
-                print("Valor inválido, tente novamente")
-                continue
-    
+        deposito = float(input("Informe o valor a ser depositado: "))
+        if deposito > 0:
+            self.__saldo += deposito
+        else:
+            print("Valor inválido, tente novamente")
+
     def sacar(self):
-        while True:
-            saque = float(input("Informe o valor a ser sacado: "))
-            if saque > 0 and saque <= self.__saldo:
-                self.__saldo -= saque
-                break
-            else:
-                print("Valor inválido, tente novamente")
+        saque = float(input("Informe o valor do saque: "))
+        if saque > 0 and saque <= self.__saldo:
+            self.__saldo -= saque
+        else:
+            print("Valor inválido, tente novamente")
+   
+    def verificar_senha(self): 
+        senha_verif = input("Informe sua senha: ")
+        if senha_verif == self.__senha:
+            print("Senha correta")
+        else: 
+            print("Senha incorreta")
+
+            
