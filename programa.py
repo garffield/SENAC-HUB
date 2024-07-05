@@ -1,36 +1,132 @@
 import os
-class CadastroPessoal():
+class FABRICAARMA():
     def __init__(self):
         pass
 
     def cadastro_pessoal(self):
         print("--> Bem vindo a area de cadastro <--")
-        self.nome = input("Informe seu nome: ")
+
+        while True: # NOME
+            self.nome = input("Informe seu nome: ")
+            if self.nome.isdigit():
+                print("Nome inválido")
+                continue
+            else:
+                break
+
+        os.system("cls")
         self.__senha = input("Informe sua senha: ")
+        os.system("cls")
         self.matricula = input("Informe sua matricula: ")
-        self.__fone = int((input("Informe seu telefone: ")))
-        self.__email = input("Informe seu email: ")
+        os.system("cls")
+
+        while True: # TELEFONE
+            self.__fone = input("Informe seu telefone: ")
+            if self.__fone.isdigit():
+                break
+            else:
+                print("Telefone inválido")
+                continue
+        
+        os.system("cls")
+        
+        while True: #EMAIL
+            self.__email = input("Informe seu email: ")
+            if '@' and ".com" in self.__email:
+                break
+            else:
+                print("Email inválido")
+                continue
+        
+        os.system("cls")
         self.__endereço = input("Informe seu endereço: ")
         os.system('cls')
         
     def cadastro_armas(self):
         print("--> Bem vindo ao cadastro de armas <--")
         self.tipo = input("Informe o tipo da arma: ")
-        self.__num_serie = input("Informe o numero de série da arma: ")
+        
+        os.system("cls")
+
+        while True: #NUM SERIE    
+            self.__num_serie = input("Informe o numero de série da arma: ")
+            if self.__num_serie.isdigit():
+                break
+            else:
+                print("Valor inválido")
+                continue
+        
+        os.system("cls")
         self.calibre = input("Informe o calibre da arma: ")
-        self.valor = input("Informe o valor da arma: ")
-        self.fabricação = input("Informe o ano de fabricação: ")
+        os.system("cls")
+        
+        while True: #VALOR
+            self.valor = input("Informe o valor da arma: ")
+            if self.valor.isdigit():
+                break
+            else:
+                print("Valor inválido")
+                continue
+        
+        os.system("cls")
+
+        while True: #ANO FABRICAÇÂO
+            self.fabricação = input("Informe o ano de fabricação: ")
+            if (len(self.fabricação)) == 4:
+                break
+            else:
+                print("Ano inválido")
+                continue
+        
+        os.system("cls")
         self.marca = input("Informe a marca da arma: ")
         os.system('cls')     
     
     def cadastro_cliente(self):
         print("--> Bem vindo a area de cadastro <--")
-        self.__nome_cliente = input("Informe o nome do cliente: ")
-        self.__cpf_cliente = input("Informe o CPF do cliente: ")
-        self.__nascimento_cliente = input("Informe o ano de nascimento do cliente: ")
+        
+        while True: #NOME
+            self.__nome_cliente = input("Informe o nome do cliente: ")
+            if self.__nome_cliente.isdigit():
+                print("Nome inválido")
+                continue
+            else:
+                break
+        
+        os.system("cls")
+
+        while True: #CPF
+            self.__cpf_cliente = input("Informe o CPF do cliente: ")
+            if (len(self.__cpf_cliente)) == 11:
+                break
+            else:
+                print("Valor inválido")
+                continue
+        
+        os.system("cls")
+
+        while True: #ANO NASCIMENTO
+            self.__nascimento_cliente = input("Informe o ano de nascimento do cliente: ")
+            if (len(self.__nascimento_cliente)) == 4:
+                break
+            else:
+                print("Ano inválido")
+                continue
+        
+        os.system("cls")
         self.__sexo_cliente = input("Informe o sexo do cliente: ")
+        os.system("cls")
         self.__endereço_cliente = input("Informe o endereço do cliente: ")
-        self.__salario_cliente = input("Informe o salario do cliente: ")
+        os.system("cls")
+
+        while True: #SALARIO CLIENTE
+            self.__salario_cliente = int(input("Informe o salario do cliente: "))
+            if self.__salario_cliente < 0:
+                print("Valor invalido")
+                continue
+            else:
+                break
+
         os.system('cls')
 
     def relatorio(self):
@@ -39,7 +135,7 @@ class CadastroPessoal():
             
             if op == '1':
                 os.system('cls')
-                print("RELATÓRIO PESSOAL\n")
+                print("RELATÓRIO PESSOAL")
                 print(f"Nome: {self.nome}")
                 print(f"Senha: {self.__senha}")
                 print(f"Matricula: {self.matricula}")
@@ -49,7 +145,7 @@ class CadastroPessoal():
                 
             elif op == '2':
                 os.system('cls')
-                print("RELATÓRIO ARMA\n")
+                print("RELATÓRIO ARMA")
                 print(f"Tipo: {self.tipo}")
                 print(f"Num Série: {self.__num_serie}")
                 print(f"Calibre: {self.calibre}")

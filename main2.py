@@ -1,6 +1,6 @@
 from programa import *
 
-x = CadastroPessoal()
+x = FABRICAARMA()
 
 while True: 
     print('-'*10 ,"BEM VINDO A FABRICA ARMAS",'-'*10)
@@ -8,6 +8,7 @@ while True:
     print("2 - CADASTRAR ARMAS")
     print("3 - CADASTRAR CLIENTE")
     print("4 - RELATÓRIO")
+    print("0 - SAIR")
     print('-'*10 ,"BEM VINDO A FABRICA ARMAS",'-'*10)
     op = input("Digite aqui: ")
     os.system("cls")
@@ -20,5 +21,7 @@ while True:
         x.cadastro_cliente()
     elif op == '4':
         x.relatorio()
+    elif op == '0':
+        break
     else:
         print("Digite um valor válido")
