@@ -1,0 +1,28 @@
+Relatório
+Pessoal
+Armas
+Cliente
+
+Cadastrar Pessoal
+Nome
+Senha ***
+Matrícula
+Fone ***
+Email ***
+Endereço ***
+
+Cadastrar Armas
+Tipo
+Número Série***
+Calibre
+Valor
+Fabricação
+Marca
+
+Cadastrar Armas
+Tipo
+Número Série***
+Calibre
+Valor
+Fabricação
+Marca
