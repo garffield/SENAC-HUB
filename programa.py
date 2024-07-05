@@ -23,7 +23,7 @@ class CadastroPessoal():
         self.valor = input("Informe o valor da arma: ")
         self.fabricação = input("Informe o ano de fabricação: ")
         self.marca = input("Informe a marca da arma: ")
-        print("Cadastro feito com sucesso")
+        print("Cadastro feito com sucesso")        
     
     def cadastro_cliente(self):
         print("--> Bem vindo a area de cadastro <--")
@@ -41,6 +41,7 @@ class CadastroPessoal():
             op = input("Qual relatório deseja ver ?\n1 - Pessoal\n2 - Armas\n3 - Cliente \nDigite aqui: ")
             
             if op == 1:
+                os.system('cls')
                 print("RELATÓRIO PESSOAL\n")
                 print(f"Nome: {self.nome}")
                 print(f"Senha: {self.__senha}")
@@ -50,6 +51,7 @@ class CadastroPessoal():
                 print(f"Endereço: {self.__endereço}")
 
             elif op == 2:
+                os.system('cls')
                 print("RELATÓRIO ARMA\n")
                 print(f"Tipo: {self.tipo}")
                 print(f"Num Série: {self.__num_serie}")
@@ -59,6 +61,7 @@ class CadastroPessoal():
                 print(f"Marca: {self.marca}")
             
             elif op == 3: 
+                os.system('cls')
                 print("RELATÓRIO CLIENTE")
                 print(f"Nome: {self.__nome_cliente}")
                 print(f"CPF: {self.__cpf_cliente}")
@@ -69,3 +72,4 @@ class CadastroPessoal():
 
             else:
                 print("Informe uma opção válida")
+
