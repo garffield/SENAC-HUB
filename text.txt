@@ -19,10 +19,10 @@ Valor
 Fabricação
 Marca
 
-Cadastrar Armas
-Tipo
-Número Série***
-Calibre
-Valor
-Fabricação
-Marca
+Cadastrar Cliente
+Nome ***
+CPF ***
+Data Nasc. ***
+Sexo ***
+Endereço ***
+Salário ***
