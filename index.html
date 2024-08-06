@@ -1,24 +1,44 @@
-<html>
+<!DOCTYPE html>
+<!--Definindo o tipo de documento-->
+<html lang="pt-br"> <!--Idioma-->
 
 <head>
-    <title>Page 1</title>
+    <meta charset="UTF-8">
+</head>
 
 <body>
-    <div>
-        <h1>Lorem</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, omnis nesciunt perspiciatis natus earum
-            quisquam molestias, nobis commodi itaque doloremque beatae dolore provident. Pariatur nesciunt ipsum eaque
-            earum veniam deserunt.</p>
-        <img src="https://www.papodecinema.com.br/wp-content/uploads/2011/11/20190615-carros-2-00-papo-de-cinema.jpg"
-            alt="teste">
-    </div>
-    <div class="botao">
-        <button>
-            <p>BOTAO</p>
-        </button>
-    </div>
 
+    <h1>Formulário legal</h1>
+    <form oninput="exibirNome()">
+        <p>
+            <label for="Nome: ">Nome:</label>
+            <input type="text" id="Nome" required>
+        <p>
+            <label for="Senha: ">Senha:</label>
+            <input type="password" id="Senha" required>
+        </p>
+        <label for="Data de nascimento">Data de nascimento:</label>
+        <input type="date" name="" id="">
+        </p>
+        <label>Sexo:</label><br>
+        <input type="checkbox" id="Masculino" name="checkbox" onclick="togglecheckbox(this)">
+        <label for="Masculino"> Masculino</label><br>
+
+        <input type="checkbox" id="Feminino" name="checkbox" onclick="togglecheckbox(this)">
+        <label for="Feminino"> Feminino</label><br>
+
+        <script>
+            function togglecheckbox(checkbox) {
+                if (checkbox.checked) {
+                    document.querySelectorAll('input[type="checkbox"]').forEach(function (el) {
+                        if (el !== checkbox) el.checked = false;
+                    });
+                }
+            }
+        </script>
+        <button>Enviar</button>
+    </form>
+    <p id="resultado"></p>
 </body>
-</head>
 
 </html>
