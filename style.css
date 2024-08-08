@@ -1,0 +1,12 @@
+button{
+    color: rgb(255, 255, 255);
+    font-family: 'Franklin Gothic Medium';
+    border: 1px;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #49846d;
+}
+body{
+    padding: 20px;
+    background-color: #82f4c8;
+}
